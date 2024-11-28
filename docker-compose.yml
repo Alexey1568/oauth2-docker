@@ -35,6 +35,7 @@ services:
       php artisan migrate:reset --force;
       php artisan migrate --force;
       php artisan db:seed;
+      echo 'Running tests...';
       php artisan test;
       php-fpm
       "
