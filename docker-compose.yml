@@ -24,6 +24,7 @@ services:
         echo 'Waiting for db...';
       done;
       echo 'Database is ready, running migrations...';
+      composer install;
       npm install;
       npm run build;
       rm -rf node_modules/.vite;

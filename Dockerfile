@@ -13,5 +13,5 @@ WORKDIR /var/www/html
 COPY ./auth_test_proj/ /var/www/html
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 COPY ./auth_test_proj/.env /var/www/html
-RUN composer install
+RUN composer install --no-dev --optimize-autoloader
 RUN npm install
